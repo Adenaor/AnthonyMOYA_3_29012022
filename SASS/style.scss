@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+@import "libs/mixin.scss";
+
+// variable
+
+$grey: #f6f6f6;
+$darkgrey: rgb(107, 105, 105);
+$purple: #9356dc;
+$degraded: linear-gradient(#ff79da, #9356dc);
+
+//
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 768px;
+  min-width: 350px;
+  font-family: "Robotot", sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+h1,
+footer h3 {
+  font-family: "Shrikhand", sans-serif;
+}
+h2 {
+  margin: 0;
+}
+.title,
+button {
+  @include shadow;
+}
+
+//  HEADER
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+}
+
+// NAV
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#locate {
+  background-color: #eaeaea;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  i {
+    margin-right: 15px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+.reserve {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+
+  width: 100%;
+  p {
+    color: #6c6c6c;
+  }
+  a {
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    margin: 30px;
+    background: $degraded;
+    &:hover {
+      @include bckgrd-lighter;
+    }
+  }
+}
+//  FONCTIONNEMENT
+
+#functioning {
+  margin: 5%;
+}
+.functioning {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-basis: 100%;
+    padding: 0;
+  }
+  li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: center;
+    padding: 10px;
+    & a:hover {
+      background-color: #f5edff;
+      & i {
+        color: $purple;
+      }
+    }
+  }
+  & a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-width: 250px;
+    max-width: 320px;
+    padding: 7px;
+    @include shadow;
+    border-radius: 15px;
+    background-color: $grey;
+    i {
+      margin: 8px 30px;
+    }
+    .number {
+      margin-left: -18px;
+      color: white;
+      background-color: $purple;
+      padding: 2px 7px;
+      border-radius: 50%;
+    }
+  }
+}
+
+//  RESTAURANT
+
+#restaurant {
+  padding: 60px 5%;
+  background-color: #f2f2f2;
+  flex-basis: 100%;
+  h2 {
+    margin: 20px 0;
+  }
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-basis: 100%;
+  gap: 25px;
+  &__bloc {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 100%;
+    gap: 25px;
+  }
+  &__card {
+    width: 320px;
+    border-radius: 25px;
+    @include shadow;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    .new {
+      float: right;
+      color: #0d8e6f;
+      background-color: #99e2d0;
+      line-height: 1px;
+      padding: 0 15px;
+      margin: 15px;
+      font-weight: 600;
+      border-radius: 3px;
+    }
+    &:hover {
+      transform: scale(1.02);
+      transition: 0.4s ease-out;
+    }
+  }
+}
+.card1 {
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+.card2 {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+.card3 {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+.card4 {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+.card1,
+.card2,
+.card3,
+.card4 {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  border-radius: 25px 25px 0 0;
+}
+.card__description {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  padding: 10px;
+  .name {
+    flex-basis: 80%;
+    gap: 0 5px;
+    line-height: 8px;
+  }
+  p {
+    color: $darkgrey;
+  }
+}
+.btn {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__heart {
+    position: relative;
+    font-size: 28px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    &--inactive {
+      color: $darkgrey;
+    }
+  }
+}
+
+//   FOOTER
+
+footer {
+  background-color: #353535;
+  color: white;
+  h3 {
+    padding: 20px 40px;
+    margin: 0;
+  }
+  ul {
+    padding-bottom: 20px;
+    margin: 0;
+  }
+  li {
+    line-height: 30px;
+  }
+  i {
+    padding-right: 10px;
+  }
+}
