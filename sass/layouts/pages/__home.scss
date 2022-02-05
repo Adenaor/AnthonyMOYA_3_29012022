@@ -52,7 +52,7 @@ nav {
   padding: 20px;
   width: 100%;
   p {
-    color: #6c6c6c;
+    color: $font_color--dgrey;
   }
 }
 .search__btn {
@@ -206,8 +206,4 @@ nav {
       color: $font_color--dgrey;
     }
   }
-}
-
-.bckgrd img {
-  width: 100%;
 }

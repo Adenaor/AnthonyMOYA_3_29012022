@@ -31,7 +31,7 @@
   font-weight: 500;
   color: white;
   border: none;
-  margin: 30px;
+  margin: 30px auto;
   background: $btn_color;
   &:hover {
     background: linear-gradient(
@@ -40,4 +40,24 @@
       lighten($secondary-color, 5%) 100%
     );
   }
+}
+@mixin bckgrd {
+  width: 100%;
+  height: 270px;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin h3__step--font {
+  color: $font_color--dgrey;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+@mixin line {
+  width: 50px;
+  height: 4px;
+  background-color: $tertiary_color;
+  margin: 0;
 }
