@@ -26,3 +26,7 @@ footer h3,
 h2 {
   margin: 0;
 }
+.title,
+button {
+  @include shadow;
+}
