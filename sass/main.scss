@@ -1,37 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
-@import "libs/mixin.scss";
+// BASE
 
-// variable
+@import "base/_font";
 
-$grey: #f6f6f6;
-$darkgrey: rgb(107, 105, 105);
-$purple: #9356dc;
-$degraded: linear-gradient(#ff79da, #9356dc);
+// UTILS
 
-//
+@import "utils/_variable.scss";
 
-html {
-  scroll-behavior: smooth;
-}
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  padding: 0;
-  max-width: 768px;
-  min-width: 350px;
-  font-family: "Robotot", sans-serif;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-ul {
-  list-style: none;
-}
+@import "utils/_mixins.scss";
+
+// LAYOUTS
+
+@import "layouts/_footer";
+@import "layouts/_general";
+@import "layouts/pages/home.scss";
+@import "layouts/pages/restaurant.scss";
+
 h1,
-footer h3 {
+footer h3,
+.menu__title h2 {
   font-family: "Shrikhand", sans-serif;
 }
 h2 {
@@ -71,7 +57,7 @@ nav {
 }
 
 #locate {
-  background-color: #eaeaea;
+  background-color: $bckgd__header--grey;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -94,24 +80,13 @@ nav {
   text-align: center;
   align-items: center;
   padding: 20px;
-
   width: 100%;
   p {
     color: #6c6c6c;
   }
-  a {
-    padding: 20px;
-    border-radius: 30px;
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    border: none;
-    margin: 30px;
-    background: $degraded;
-    &:hover {
-      @include bckgrd-lighter;
-    }
-  }
+}
+.search__btn {
+  @include btn;
 }
 //  FONCTIONNEMENT
 
@@ -136,7 +111,7 @@ nav {
     & a:hover {
       background-color: #f5edff;
       & i {
-        color: $purple;
+        color: $primary-color;
       }
     }
   }
@@ -151,14 +126,14 @@ nav {
     padding: 7px;
     @include shadow;
     border-radius: 15px;
-    background-color: $grey;
+    background-color: $bckgd_color--grey;
     i {
       margin: 8px 30px;
     }
     .number {
       margin-left: -18px;
       color: white;
-      background-color: $purple;
+      background-color: $primary-color;
       padding: 2px 7px;
       border-radius: 50%;
     }
@@ -202,15 +177,11 @@ nav {
       float: right;
       color: #0d8e6f;
       background-color: #99e2d0;
-      line-height: 1px;
       padding: 0 15px;
       margin: 15px;
       font-weight: 600;
       border-radius: 3px;
-    }
-    &:hover {
-      transform: scale(1.02);
-      transition: 0.4s ease-out;
+      line-height: 1px;
     }
   }
 }
@@ -247,7 +218,7 @@ nav {
     line-height: 8px;
   }
   p {
-    color: $darkgrey;
+    color: $font_color--dgrey;
   }
 }
 .btn {
@@ -262,28 +233,11 @@ nav {
     box-shadow: none;
     background-color: transparent;
     &--inactive {
-      color: $darkgrey;
+      color: $font_color--dgrey;
     }
   }
 }
 
-//   FOOTER
-
-footer {
-  background-color: #353535;
-  color: white;
-  h3 {
-    padding: 20px 40px;
-    margin: 0;
-  }
-  ul {
-    padding-bottom: 20px;
-    margin: 0;
-  }
-  li {
-    line-height: 30px;
-  }
-  i {
-    padding-right: 10px;
-  }
+.bckgrd img {
+  width: 100%;
 }

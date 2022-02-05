@@ -1,4 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+footer {
+  background-color: #353535;
+  color: white;
+}
+footer h3 {
+  padding: 20px 40px;
+  margin: 0;
+}
+footer ul {
+  padding-bottom: 20px;
+  margin: 0;
+}
+footer li {
+  line-height: 30px;
+}
+footer i {
+  padding-right: 10px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,7 +44,18 @@ ul {
 }
 
 h1,
-footer h3 {
+footer h3,
+.menu__title h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+h1,
+footer h3,
+.menu__title h2 {
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -91,8 +121,10 @@ nav {
 .reserve p {
   color: #6c6c6c;
 }
-.reserve a {
-  padding: 20px;
+
+.search__btn {
+  width: 226px;
+  padding: 20px 0;
   border-radius: 30px;
   font-size: 17px;
   font-weight: 500;
@@ -101,8 +133,8 @@ nav {
   margin: 30px;
   background: linear-gradient(#ff79da, #9356dc);
 }
-.reserve a:hover {
-  background: linear-gradient(360deg, #a16be0 0%, #ff93e1 100%);
+.search__btn:hover {
+  background: linear-gradient(360deg, #ae80e5 0%, #ff93e1 100%);
 }
 
 #functioning {
@@ -191,15 +223,11 @@ nav {
   float: right;
   color: #0d8e6f;
   background-color: #99e2d0;
-  line-height: 1px;
   padding: 0 15px;
   margin: 15px;
   font-weight: 600;
   border-radius: 3px;
-}
-.restaurant__card:hover {
-  transform: scale(1.02);
-  transition: 0.4s ease-out;
+  line-height: 1px;
 }
 
 .card1 {
@@ -261,23 +289,8 @@ nav {
   color: #6b6969;
 }
 
-footer {
-  background-color: #353535;
-  color: white;
-}
-footer h3 {
-  padding: 20px 40px;
-  margin: 0;
-}
-footer ul {
-  padding-bottom: 20px;
-  margin: 0;
-}
-footer li {
-  line-height: 30px;
-}
-footer i {
-  padding-right: 10px;
+.bckgrd img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
