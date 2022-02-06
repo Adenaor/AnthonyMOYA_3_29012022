@@ -1,3 +1,13 @@
+.line {
+  @include line;
+}
+.bckgrd {
+  @include bckgrd;
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+// TITLE
+
 #omf__title {
   padding: 20px;
   justify-content: center;
@@ -10,13 +20,7 @@
   }
 }
 
-.line {
-  @include line;
-}
-.bckgrd {
-  @include bckgrd;
-  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-}
+// MENU
 
 .menu {
   display: flex;
@@ -51,6 +55,11 @@
     display: flex;
     justify-content: space-between;
     background-color: white;
+    overflow: hidden;
+    &:hover .meal__price {
+      margin-right: 0;
+      transition: all 400ms ease-in-out;
+    }
 
     &__description {
       width: 300px;
@@ -65,9 +74,7 @@
         text-overflow: ellipsis;
         white-space: nowrap;
       }
-      h4 {
-        font-weight: bold;
-      }
+
       p {
         color: $font_color--dgrey;
         font-size: 14px;
@@ -77,6 +84,7 @@
       width: 120px;
       height: 75px;
       display: flex;
+      margin-right: -60px;
       .price {
         display: flex;
         justify-content: center;
@@ -94,6 +102,7 @@
           justify-content: center;
           background-color: $tertiary_color;
           transition: tranform 400ms;
+
           .fas {
             margin: auto;
             justify-content: center;
