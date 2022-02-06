@@ -1,7 +1,7 @@
 .line {
   @include line;
 }
-.bckgrd {
+.bckgrd--francaise {
   @include bckgrd;
   background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: $bckgd_color--grey;
+  background-color: $bckgd__color--grey;
   margin-top: -50px;
   padding: 0 20px;
   border-radius: 40px 40px 0 0;
@@ -48,14 +48,16 @@
   flex-direction: column;
 
   .meal {
-    height: 75px;
     @include meal--shadow;
+    height: 75px;
     margin: 8px 0;
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: $bckgd__color--white;
     overflow: hidden;
+    cursor: pointer;
+
     &:hover .meal__price {
       margin-right: 0;
       transition: all 400ms ease-in-out;
@@ -76,7 +78,7 @@
       }
 
       p {
-        color: $font_color--dgrey;
+        color: $font__color--dgrey;
         font-size: 14px;
       }
     }
@@ -100,7 +102,7 @@
           border-radius: 0 15px 15px 0;
           text-align: center;
           justify-content: center;
-          background-color: $tertiary_color;
+          background-color: $tertiary__color;
           transition: tranform 400ms;
 
           .fas {
@@ -109,7 +111,7 @@
             padding: 6px 6px;
             border-radius: 50%;
             background-color: white;
-            color: $tertiary_color;
+            color: $tertiary__color;
           }
         }
       }

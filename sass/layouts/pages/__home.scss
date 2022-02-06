@@ -52,7 +52,7 @@ nav {
   padding: 20px;
   width: 100%;
   p {
-    color: $font_color--dgrey;
+    color: $font__color--dgrey;
   }
 }
 .search__btn {
@@ -81,7 +81,7 @@ nav {
     & a:hover {
       background-color: #f5edff;
       & i {
-        color: $primary-color;
+        color: $primary__color;
       }
     }
   }
@@ -96,14 +96,14 @@ nav {
     padding: 7px;
     @include shadow;
     border-radius: 15px;
-    background-color: $bckgd_color--grey;
+    background-color: $bckgd__color--grey;
     i {
       margin: 8px 30px;
     }
     .number {
       margin-left: -18px;
       color: white;
-      background-color: $primary-color;
+      background-color: $primary__color;
       padding: 2px 7px;
       border-radius: 50%;
     }
@@ -145,8 +145,8 @@ nav {
     flex-direction: column;
     .new {
       float: right;
-      color: #0d8e6f;
-      background-color: #99e2d0;
+      color: $font__color--new;
+      background-color: $bckgd__color--new;
       padding: 0 15px;
       margin: 15px;
       font-weight: 600;
@@ -188,7 +188,7 @@ nav {
     line-height: 8px;
   }
   p {
-    color: $font_color--dgrey;
+    color: $font__color--dgrey;
   }
 }
 .btn {
@@ -203,7 +203,7 @@ nav {
     box-shadow: none;
     background-color: transparent;
     &--inactive {
-      color: $font_color--dgrey;
+      color: $font__color--dgrey;
     }
   }
 }

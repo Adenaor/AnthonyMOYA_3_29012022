@@ -118,6 +118,7 @@ nav {
 }
 
 .search__btn {
+  cursor: pointer;
   width: 226px;
   padding: 20px 0;
   border-radius: 30px;
@@ -291,7 +292,7 @@ nav {
   margin: 0 0 10px;
 }
 
-.bckgrd {
+.bckgrd--francaise {
   width: 100%;
   height: 270px;
   background-position: center;
@@ -340,14 +341,15 @@ nav {
   flex-direction: column;
 }
 .menu__step .meal {
-  height: 75px;
   box-shadow: 1px 3px 15px 2px rgba(0, 0, 0, 0.08);
+  height: 75px;
   margin: 8px 0;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.973);
   overflow: hidden;
+  cursor: pointer;
 }
 .menu__step .meal:hover .meal__price {
   margin-right: 0;

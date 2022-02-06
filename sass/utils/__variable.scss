@@ -1,14 +1,20 @@
 // COLORS
 
-$primary-color: #9356dc;
-$secondary_color: #ff79da;
-$tertiary_color: #99e2d0;
+$primary__color: #9356dc;
+$secondary__color: #ff79da;
+$tertiary__color: #99e2d0;
 
-$bckgd_color--grey: #f6f6f6;
+// BACKGROUND
+
+$bckgd__color--grey: #f6f6f6;
 $bckgd__header--grey: #eaeaea;
+$bckgd__color--white: rgba(255, 255, 255, 0.973);
+$bckgd__color--new: #99e2d0;
+$backgd__footer--color: #353535;
 
-$font_color--dgrey: rgb(107, 105, 105);
+// FONT
 
-$btn_color: linear-gradient($secondary-color, $primary-color);
+$font__color--dgrey: rgb(107, 105, 105);
+$font__color--new: #0d8e6f;
 
-$footer--color: #353535;
+$btn__color: linear-gradient($secondary__color, $primary__color);

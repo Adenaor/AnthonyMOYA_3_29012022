@@ -4,9 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: -moz-linear-gradient(bottom, $secondary-color, $primary-color);
-  background: -webkit-linear-gradient(bottom, $secondary-color, $primary-color);
-  background: linear-gradient(bottom, $secondary-color, $primary-color);
+  background: -moz-linear-gradient(bottom, $secondary__color, $primary__color);
+  background: -webkit-linear-gradient(
+    bottom,
+    $secondary__color,
+    $primary__color
+  );
+  background: linear-gradient(bottom, $secondary__color, $primary__color);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -27,8 +31,8 @@
 @mixin btn__bckgrd--lighter {
   background: linear-gradient(
     360deg,
-    lighten($primary-color, 10%) 0%,
-    lighten($secondary-color, 5%) 100%
+    lighten($primary__color, 10%) 0%,
+    lighten($secondary__color, 5%) 100%
   );
 }
 @mixin bckgrd {
@@ -40,6 +44,7 @@
 
 //
 @mixin btn {
+  cursor: pointer;
   width: 226px;
   padding: 20px 0;
   border-radius: 30px;
@@ -48,14 +53,14 @@
   color: white;
   border: none;
   margin: 30px auto;
-  background: $btn_color;
+  background: $btn__color;
   &:hover {
     @include btn__bckgrd--lighter;
   }
 }
 
 @mixin h3__step--font {
-  color: $font_color--dgrey;
+  color: $font__color--dgrey;
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -64,6 +69,6 @@
 @mixin line {
   width: 50px;
   height: 4px;
-  background-color: $tertiary_color;
+  background-color: $tertiary__color;
   margin: 0 0 10px;
 }
