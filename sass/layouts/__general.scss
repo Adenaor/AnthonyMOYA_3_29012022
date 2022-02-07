@@ -35,6 +35,15 @@ h4 {
   font-weight: bold;
 }
 
+.search__btn {
+  @include btn;
+}
+
+button,
+.meal {
+  cursor: pointer;
+}
+
 .btn__heart {
   position: relative;
   font-size: 32px;

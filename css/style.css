@@ -43,6 +43,26 @@ h4 {
   font-weight: bold;
 }
 
+.search__btn {
+  width: 226px;
+  padding: 20px 0;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  margin: 30px auto;
+  background: linear-gradient(#ff79da, #9356dc);
+}
+.search__btn:hover {
+  background: linear-gradient(360deg, #ae80e5 0%, #ff93e1 100%);
+}
+
+button,
+.meal {
+  cursor: pointer;
+}
+
 .btn__heart {
   position: relative;
   font-size: 32px;
@@ -145,22 +165,6 @@ nav {
 }
 .reserve p {
   color: #6b6969;
-}
-
-.search__btn {
-  cursor: pointer;
-  width: 226px;
-  padding: 20px 0;
-  border-radius: 30px;
-  font-size: 17px;
-  font-weight: 500;
-  color: white;
-  border: none;
-  margin: 30px auto;
-  background: linear-gradient(#ff79da, #9356dc);
-}
-.search__btn:hover {
-  background: linear-gradient(360deg, #ae80e5 0%, #ff93e1 100%);
 }
 
 #functioning {
