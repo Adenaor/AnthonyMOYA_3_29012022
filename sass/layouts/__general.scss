@@ -34,3 +34,27 @@ button {
 h4 {
   font-weight: bold;
 }
+
+.btn__heart {
+  position: relative;
+  font-size: 32px;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  transition: all 400ms ease-in-out;
+  &--inactive {
+    color: $font__color--dgrey;
+    position: absolute;
+  }
+  &--active {
+    @include heart--color;
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+  }
+  &:hover &--inactive {
+    opacity: 0;
+  }
+  &:hover &--active {
+    opacity: 1;
+  }
+}

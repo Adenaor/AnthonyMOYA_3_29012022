@@ -1,9 +1,4 @@
-@mixin heart {
-  flex-basis: 20%;
-  font-size: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@mixin heart--color {
   background: -moz-linear-gradient(bottom, $secondary__color, $primary__color);
   background: -webkit-linear-gradient(
     bottom,
@@ -73,7 +68,11 @@
   margin: 0 0 10px;
 }
 
-@mixin animation--check {
+@mixin animation--slide {
   margin-right: 0;
   transition: all 400ms ease-in-out;
+}
+@mixin animation--check {
+  transform: rotate(360deg);
+  transition: all 300ms ease-in-out 90ms;
 }

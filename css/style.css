@@ -43,6 +43,36 @@ h4 {
   font-weight: bold;
 }
 
+.btn__heart {
+  position: relative;
+  font-size: 32px;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  transition: all 400ms ease-in-out;
+}
+.btn__heart--inactive {
+  color: #6b6969;
+  position: absolute;
+}
+.btn__heart--active {
+  background: -moz-linear-gradient(bottom, #ff79da, #9356dc);
+  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc);
+  background: linear-gradient(bottom, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+.btn__heart:hover .btn__heart--inactive {
+  opacity: 0;
+}
+.btn__heart:hover .btn__heart--active {
+  opacity: 1;
+}
+
 footer {
   background-color: #353535;
   color: white;
@@ -264,24 +294,10 @@ nav {
   gap: 0 5px;
   line-height: 8px;
 }
+.card__description .btn__heart {
+  top: 20px;
+}
 .card__description p {
-  color: #6b6969;
-}
-
-.btn {
-  flex-basis: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn__heart {
-  position: relative;
-  font-size: 28px;
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
-}
-.btn__heart--inactive {
   color: #6b6969;
 }
 
@@ -321,7 +337,7 @@ nav {
   border-radius: 40px 40px 0 0;
 }
 .menu__title {
-  padding: 40px 0 10px;
+  padding: 40px 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -403,7 +419,7 @@ nav {
   background-color: white;
   color: #99e2d0;
   transform: rotate(90deg);
-  transition: all 3s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
