@@ -1,7 +1,7 @@
 .line {
   @include line;
 }
-.bckgrd--francaise {
+.bckgrd {
   @include bckgrd;
   background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
@@ -49,21 +49,27 @@
 
   .meal {
     @include meal--shadow;
-    height: 75px;
-    margin: 8px 0;
+    margin: 8px 5px;
     border-radius: 15px;
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
-    background-color: $bckgd__color--white;
+    background-color: white;
     overflow: hidden;
-    cursor: pointer;
 
-    &:hover .meal__price {
+    &:hover .meal__price--check {
       margin-right: 0;
       transition: all 400ms ease-in-out;
     }
+    &:hover i {
+      transform: rotate(360deg);
+      transition: all 300ms ease-in-out 90ms;
+    }
+    &:hover .meal__description {
+      white-space: nowrap;
+    }
 
     &__description {
+      display: flex;
       width: 300px;
       padding: 10px;
       display: inline-block;
@@ -74,7 +80,6 @@
         margin: 5px 0;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
       }
 
       p {
@@ -83,36 +88,31 @@
       }
     }
     &__price {
-      width: 120px;
-      height: 75px;
       display: flex;
-      margin-right: -60px;
-      .price {
+      span {
         display: flex;
-        justify-content: center;
+        font-weight: bold;
+        padding: 10px;
+        margin: 5px 10px;
         align-items: flex-end;
-        width: 60px;
-        span {
-          font-weight: bold;
-          margin: 10px;
-        }
-        &__check {
-          display: flex;
-          width: 60px;
-          border-radius: 0 15px 15px 0;
-          text-align: center;
-          justify-content: center;
-          background-color: $tertiary__color;
-          transition: tranform 400ms;
+      }
+      &--check {
+        display: flex;
+        width: 70px;
+        margin-right: -70px;
+        border-radius: 0 15px 15px 0;
+        background-color: $tertiary__color;
+        transition: 400ms ease-in-out;
 
-          .fas {
-            margin: auto;
-            justify-content: center;
-            padding: 6px 6px;
-            border-radius: 50%;
-            background-color: white;
-            color: $tertiary__color;
-          }
+        i {
+          margin: auto;
+          justify-content: center;
+          padding: 6px 6px;
+          border-radius: 50%;
+          background-color: white;
+          color: $tertiary__color;
+          transform: rotate(90deg);
+          transition: all 3s ease-in-out;
         }
       }
     }

@@ -72,3 +72,8 @@
   background-color: $tertiary__color;
   margin: 0 0 10px;
 }
+
+@mixin animation--check {
+  margin-right: 0;
+  transition: all 400ms ease-in-out;
+}
