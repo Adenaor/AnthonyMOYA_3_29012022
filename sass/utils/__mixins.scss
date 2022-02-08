@@ -29,6 +29,7 @@
     lighten($primary__color, 10%) 0%,
     lighten($secondary__color, 5%) 100%
   );
+  opacity: 0.8;
 }
 @mixin bckgrd {
   width: 100%;
@@ -48,6 +49,7 @@
   border: none;
   margin: 30px auto;
   background: $btn__color;
+  transition: all 200ms ease-out;
   &:hover {
     @include btn__bckgrd--lighter;
   }
@@ -66,10 +68,13 @@
   background-color: $tertiary__color;
   margin: 0 0 10px;
 }
+@mixin transition {
+  transition: all 400ms ease-in-out;
+}
 
 @mixin animation--slide {
   margin-right: 0;
-  transition: all 400ms ease-in-out;
+  @include transition;
 }
 @mixin animation--check {
   transform: rotate(360deg);
