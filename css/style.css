@@ -35,7 +35,9 @@ h2 {
 }
 
 .title,
-button {
+.btn,
+.btn__search,
+.btn__command {
   box-shadow: 0px 3px 7px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -43,7 +45,7 @@ h4 {
   font-weight: bold;
 }
 
-.search__btn {
+.btn__search, .btn__command {
   width: 226px;
   padding: 20px 0;
   border-radius: 30px;
@@ -51,13 +53,17 @@ h4 {
   font-weight: 500;
   color: white;
   border: none;
-  margin: 30px auto;
+  margin: auto;
   background: linear-gradient(#ff79da, #9356dc);
   transition: all 200ms ease-out;
 }
-.search__btn:hover {
+.btn__search:hover, .btn__command:hover {
   background: linear-gradient(360deg, #ae80e5 0%, #ff93e1 100%);
   opacity: 0.8;
+}
+
+.btn__command {
+  margin: 30px auto;
 }
 
 button,
@@ -68,9 +74,6 @@ button,
 .btn__heart {
   position: relative;
   font-size: 32px;
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
 }
 .btn__heart--inactive {
   color: #6b6969;
@@ -79,9 +82,9 @@ button,
   transition: all 400ms ease-in-out;
 }
 .btn__heart--active {
-  background: -moz-linear-gradient(bottom, #ff79da, #9356dc);
-  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc);
-  background: linear-gradient(bottom, #ff79da, #9356dc);
+  background: -moz-linear-gradient(to bottom, #ff79da, #9356dc);
+  background: -webkit-linear-gradient(to bottom, #ff79da, #9356dc);
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -165,13 +168,14 @@ nav {
   align-items: center;
   padding: 20px;
   width: 100%;
+  gap: 40px;
 }
 .reserve p {
   color: #6b6969;
 }
 
 #functioning {
-  margin: 5%;
+  margin: 10% 5%;
 }
 
 .functioning ul {
@@ -188,8 +192,6 @@ nav {
   flex-basis: 100%;
   justify-content: center;
   padding: 10px;
-  opacity: 1;
-  transition: all 400ms ease-in-out;
 }
 .functioning li a:hover {
   background-color: #f5edff;
@@ -222,7 +224,7 @@ nav {
 }
 
 #restaurant {
-  padding: 60px 5%;
+  padding: 10% 5%;
   background-color: #f2f2f2;
   flex-basis: 100%;
 }
@@ -263,6 +265,10 @@ nav {
   font-weight: 600;
   border-radius: 3px;
   line-height: 1px;
+}
+.restaurant__card .btn__heart {
+  top: 15px;
+  left: 10px;
 }
 
 .card1 {

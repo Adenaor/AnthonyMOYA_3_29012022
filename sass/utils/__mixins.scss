@@ -1,11 +1,15 @@
 @mixin heart--color {
-  background: -moz-linear-gradient(bottom, $secondary__color, $primary__color);
-  background: -webkit-linear-gradient(
-    bottom,
+  background: -moz-linear-gradient(
+    to bottom,
     $secondary__color,
     $primary__color
   );
-  background: linear-gradient(bottom, $secondary__color, $primary__color);
+  background: -webkit-linear-gradient(
+    to bottom,
+    $secondary__color,
+    $primary__color
+  );
+  background: linear-gradient(to bottom, $secondary__color, $primary__color);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -47,7 +51,7 @@
   font-weight: 500;
   color: white;
   border: none;
-  margin: 30px auto;
+  margin: auto;
   background: $btn__color;
   transition: all 200ms ease-out;
   &:hover {

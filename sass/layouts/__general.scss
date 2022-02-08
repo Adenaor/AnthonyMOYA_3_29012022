@@ -28,15 +28,20 @@ h2 {
   margin: 0;
 }
 .title,
-button {
+.btn,
+.btn__search {
   @include shadow;
 }
 h4 {
   font-weight: bold;
 }
 
-.search__btn {
+.btn__search {
   @include btn;
+}
+.btn__command {
+  @extend .btn__search;
+  margin: 30px auto;
 }
 
 button,
@@ -47,9 +52,6 @@ button,
 .btn__heart {
   position: relative;
   font-size: 32px;
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
   &--inactive {
     color: $font__color--dgrey;
     position: absolute;
