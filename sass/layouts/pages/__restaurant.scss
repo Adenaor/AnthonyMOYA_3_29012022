@@ -53,76 +53,76 @@
     @include h3__step--font;
     margin-bottom: 10px;
   }
-}
-.menu__step {
-  display: flex;
-  flex-direction: column;
+  &__step {
+    display: flex;
+    flex-direction: column;
 
-  .meal {
-    @include meal--shadow;
-    margin: 8px 5px;
-    border-radius: 15px;
-    display: inline-flex;
-    justify-content: space-between;
-    background-color: white;
-    overflow: hidden;
-
-    &:hover .meal__price--check {
-      @include animation--slide;
-    }
-    &:hover i {
-      @include animation--check;
-    }
-    &:hover h4 {
-      white-space: nowrap;
-    }
-
-    &__description {
-      display: flex;
-      width: 300px;
-      padding: 10px;
-      display: inline-block;
+    .meal {
+      @include meal--shadow;
+      margin: 8px 5px;
+      border-radius: 15px;
+      display: inline-flex;
+      justify-content: space-between;
+      background-color: white;
       overflow: hidden;
 
-      h4,
-      p {
-        margin: 5px 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
+      &:hover .meal__price--check {
+        @include animation--slide;
       }
-
-      p {
-        color: $font__color--dgrey;
-        font-size: 14px;
+      &:hover i {
+        @include animation--check;
+      }
+      &:hover h4 {
         white-space: nowrap;
       }
-    }
-    &__price {
-      display: flex;
-      span {
-        display: flex;
-        font-weight: bold;
-        padding: 10px;
-        margin: 5px 10px;
-        align-items: flex-end;
-      }
-      &--check {
-        display: flex;
-        width: 70px;
-        margin-right: -70px;
-        border-radius: 0 15px 15px 0;
-        background-color: $tertiary__color;
-        transition: 400ms ease-in-out;
 
-        i {
-          margin: auto;
-          justify-content: center;
-          padding: 6px 6px;
-          border-radius: 50%;
-          background-color: white;
-          color: $tertiary__color;
-          transform: rotate(90deg);
-          transition: all 1s ease-in-out;
+      &__description {
+        display: flex;
+        width: 300px;
+        padding: 10px;
+        display: inline-block;
+        overflow: hidden;
+
+        h4,
+        p {
+          margin: 5px 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        p {
+          color: $font__color--dgrey;
+          font-size: 14px;
+          white-space: nowrap;
+        }
+      }
+      &__price {
+        display: flex;
+        span {
+          display: flex;
+          font-weight: bold;
+          padding: 10px;
+          margin: 5px 10px;
+          align-items: flex-end;
+        }
+        &--check {
+          display: flex;
+          width: 70px;
+          margin-right: -70px;
+          border-radius: 0 15px 15px 0;
+          background-color: $tertiary__color;
+          transition: 400ms ease-in-out;
+
+          i {
+            margin: auto;
+            justify-content: center;
+            padding: 6px 6px;
+            border-radius: 50%;
+            background-color: white;
+            color: $tertiary__color;
+            transform: rotate(90deg);
+            transition: all 1s ease-in-out;
+          }
         }
       }
     }

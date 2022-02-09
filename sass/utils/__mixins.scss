@@ -1,3 +1,12 @@
+@mixin shadow {
+  box-shadow: 0px 3px 7px 3px rgba(0, 0, 0, 0.15);
+}
+@mixin meal--shadow {
+  box-shadow: 1px 3px 15px 2px rgba(0, 0, 0, 0.08);
+}
+
+//
+
 @mixin heart--color {
   background: -moz-linear-gradient(
     to bottom,
@@ -16,17 +25,6 @@
   color: transparent;
 }
 
-//
-
-@mixin shadow {
-  box-shadow: 0px 3px 7px 3px rgba(0, 0, 0, 0.15);
-}
-@mixin meal--shadow {
-  box-shadow: 1px 3px 15px 2px rgba(0, 0, 0, 0.08);
-}
-
-//
-
 @mixin btn__bckgrd--lighter {
   background: linear-gradient(
     360deg,
@@ -35,14 +33,7 @@
   );
   opacity: 0.8;
 }
-@mixin bckgrd {
-  width: 100%;
-  height: 270px;
-  background-position: center;
-  background-size: cover;
-}
 
-//
 @mixin btn {
   width: 226px;
   padding: 20px 0;
@@ -59,6 +50,15 @@
   }
 }
 
+//
+
+@mixin bckgrd {
+  width: 100%;
+  height: 270px;
+  background-position: center;
+  background-size: cover;
+}
+
 @mixin h3__step--font {
   color: $font__color--dgrey;
   font-weight: 200;
@@ -72,10 +72,12 @@
   background-color: $tertiary__color;
   margin: 0 0 10px;
 }
+
+// ANIMATION
+
 @mixin transition {
   transition: all 400ms ease-in-out;
 }
-
 @mixin animation--slide {
   margin-right: 0;
   @include transition;
