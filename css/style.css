@@ -79,7 +79,6 @@ h4 {
   color: #6b6969;
   position: absolute;
   transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
 }
 .btn__heart--active {
   background: -moz-linear-gradient(to bottom, #ff79da, #9356dc);
@@ -211,9 +210,11 @@ nav {
   box-shadow: 0px 3px 7px 3px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   background-color: #f6f6f6;
+  transition: all 150ms ease-in-out;
 }
 .functioning a i {
   margin: 8px 30px;
+  transition: all 300ms ease-in-out;
 }
 .functioning a .number {
   margin-left: -18px;
@@ -393,11 +394,10 @@ nav {
 }
 .menu__step .meal:hover .meal__price--check {
   margin-right: 0;
-  transition: all 400ms ease-in-out;
 }
 .menu__step .meal:hover i {
   transform: rotate(360deg);
-  transition: all 300ms ease-in-out 90ms;
+  transition: all 300ms ease-in-out 100ms;
 }
 .menu__step .meal:hover h4 {
   white-space: nowrap;
@@ -436,7 +436,7 @@ nav {
   margin-right: -70px;
   border-radius: 0 15px 15px 0;
   background-color: #99e2d0;
-  transition: 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .menu__step .meal__price--check i {
   margin: auto;
@@ -446,7 +446,7 @@ nav {
   background-color: white;
   color: #99e2d0;
   transform: rotate(90deg);
-  transition: all 1s ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

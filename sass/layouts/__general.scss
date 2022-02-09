@@ -55,12 +55,11 @@ h4 {
   &--inactive {
     color: $font__color--dgrey;
     position: absolute;
-    transition: all 400ms ease-in-out;
-    @include transition;
+    @include transition($duration: $slow);
   }
   &--active {
     @include heart--color;
-    @include transition;
+    @include transition($duration: $slow);
     opacity: 0;
   }
   &:hover &--inactive {

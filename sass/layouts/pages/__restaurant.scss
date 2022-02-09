@@ -111,8 +111,7 @@
           margin-right: -70px;
           border-radius: 0 15px 15px 0;
           background-color: $tertiary__color;
-          transition: 400ms ease-in-out;
-
+          @include transition($duration: $slow);
           i {
             margin: auto;
             justify-content: center;
@@ -121,7 +120,7 @@
             background-color: white;
             color: $tertiary__color;
             transform: rotate(90deg);
-            transition: all 1s ease-in-out;
+            @include transition($duration: $slowly);
           }
         }
       }
