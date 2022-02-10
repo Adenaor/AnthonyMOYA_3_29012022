@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 html {
   scroll-behavior: smooth;
+  max-width: 768px;
+  min-width: 400px;
 }
 
 * {
@@ -8,10 +10,9 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
-  max-width: 768px;
-  min-width: 400px;
   font-family: "Robotot", sans-serif;
 }
 
@@ -98,6 +99,71 @@ h4 {
   opacity: 1;
 }
 
+.loader {
+  position: fixed;
+  background-color: #fdfcfc;
+  opacity: 0.9;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  animation: loading 3s ease-out;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+.loader .loader__circles {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9356dc;
+  animation: spin 1s linear infinite;
+}
+.loader .loader__circles::after {
+  content: "";
+  position: absolute;
+  border: 3px solid transparent;
+  border-top-color: #ff79da;
+  opacity: 0.8;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  animation: spin 2s linear infinite;
+}
+.loader .loader__circles::before {
+  content: "";
+  position: absolute;
+  border: 3px solid transparent;
+  border-top-color: #99e2d0;
+  opacity: 0.5;
+  border-radius: 50%;
+  top: 12px;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+  animation: spin 4s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  100% {
+    background-color: transparent;
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
 footer {
   background-color: #353535;
   color: white;
@@ -130,7 +196,6 @@ header h2 {
 .title {
   display: flex;
   justify-content: center;
-  align-items: center;
   z-index: 1;
   width: 100%;
 }
@@ -358,11 +423,15 @@ nav {
 .menu {
   display: flex;
   flex-direction: column;
-  width: 100%;
   background-color: #f6f6f6;
   margin-top: -50px;
   padding: 0 20px;
   border-radius: 40px 40px 0 0;
+}
+.menu #animation1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .menu__title {
   padding: 40px 10px;
@@ -397,7 +466,8 @@ nav {
 }
 .menu__step .meal:hover i {
   transform: rotate(360deg);
-  transition: all 300ms ease-in-out 100ms;
+  transition: all 300ms ease-in-out;
+  transition-delay: 100ms;
 }
 .menu__step .meal:hover h4 {
   white-space: nowrap;
@@ -446,7 +516,7 @@ nav {
   background-color: white;
   color: #99e2d0;
   transform: rotate(90deg);
-  transition: all 1000ms ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

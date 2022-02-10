@@ -83,5 +83,53 @@
 }
 @mixin animation--check {
   transform: rotate(360deg);
-  transition: all 300ms ease-in-out 100ms;
+  @include transition($duration: $medium);
+  transition-delay: 100ms;
+}
+
+@mixin loading {
+  .loader__circles {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: $primary__color;
+    animation: spin 1s linear infinite;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border: 3px solid transparent;
+      border-top-color: $secondary__color;
+      opacity: 0.8;
+      border-radius: 50%;
+      top: 5px;
+      left: 5px;
+      bottom: 5px;
+      right: 5px;
+      animation: spin 2s linear infinite;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      border: 3px solid transparent;
+      border-top-color: $tertiary__color;
+      opacity: 0.5;
+      border-radius: 50%;
+      top: 12px;
+      left: 12px;
+      bottom: 12px;
+      right: 12px;
+      animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
 }
