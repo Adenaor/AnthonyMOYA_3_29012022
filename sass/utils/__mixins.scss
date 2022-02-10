@@ -87,7 +87,7 @@
   transition-delay: 100ms;
 }
 
-@mixin loading {
+@mixin animation--loading {
   .loader__circles {
     height: 150px;
     width: 150px;
@@ -130,6 +130,23 @@
       100% {
         transform: rotate(360deg);
       }
+    }
+  }
+}
+@mixin animation--slide__menu {
+  transform-origin: 50% 100%;
+  animation: menu 2s ease-in;
+
+  @keyframes menu {
+    0% {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+    100% {
+      opacity: 1;
     }
   }
 }

@@ -84,10 +84,10 @@ h4 {
   justify-content: center;
   height: 100%;
   width: 100%;
-  @include loading;
-  animation: loading 3s ease-out;
+  @include animation--loading;
+  animation: loading 4s ease-out;
   animation-duration: 1s;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-fill-mode: both;
 
   @keyframes loading {

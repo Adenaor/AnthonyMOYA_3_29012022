@@ -109,9 +109,9 @@ h4 {
   justify-content: center;
   height: 100%;
   width: 100%;
-  animation: loading 3s ease-out;
+  animation: loading 4s ease-out;
   animation-duration: 1s;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-fill-mode: both;
 }
 .loader .loader__circles {
@@ -428,11 +428,6 @@ nav {
   padding: 0 20px;
   border-radius: 40px 40px 0 0;
 }
-.menu #animation1 {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 .menu__title {
   padding: 40px 10px;
   display: flex;
@@ -453,6 +448,8 @@ nav {
   flex-direction: column;
 }
 .menu__step .meal {
+  transform-origin: 50% 100%;
+  animation: menu 2s ease-in;
   box-shadow: 1px 3px 15px 2px rgba(0, 0, 0, 0.08);
   margin: 8px 5px;
   border-radius: 15px;
@@ -460,6 +457,18 @@ nav {
   justify-content: space-between;
   background-color: white;
   overflow: hidden;
+}
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .menu__step .meal:hover .meal__price--check {
   margin-right: 0;
