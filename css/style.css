@@ -449,7 +449,7 @@ nav {
 }
 .menu__step .meal {
   transform-origin: 50% 100%;
-  animation: menu 2s ease-in;
+  animation: menu 1.2s ease-in-out;
   box-shadow: 1px 3px 15px 2px rgba(0, 0, 0, 0.08);
   margin: 8px 5px;
   border-radius: 15px;
@@ -457,6 +457,7 @@ nav {
   justify-content: space-between;
   background-color: white;
   overflow: hidden;
+  animation-fill-mode: both;
 }
 @keyframes menu {
   0% {
@@ -526,6 +527,12 @@ nav {
   color: #99e2d0;
   transform: rotate(90deg);
   transition: all 1s ease-in-out;
+}
+.menu__step .meal2 {
+  animation-delay: 0.25s;
+}
+.menu__step .meal3 {
+  animation-delay: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
