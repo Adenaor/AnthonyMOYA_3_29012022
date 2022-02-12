@@ -8,12 +8,12 @@
 //
 
 @mixin heart--color {
-  background: -moz-linear-gradient(
+  -moz-background: linear-gradient(
     to bottom,
     $secondary__color,
     $primary__color
   );
-  background: -webkit-linear-gradient(
+  -webkit-background: linear-gradient(
     to bottom,
     $secondary__color,
     $primary__color
@@ -150,7 +150,6 @@
     }
     100% {
       opacity: 1;
-      transform: translateY(1);
     }
   }
 }

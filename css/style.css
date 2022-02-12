@@ -81,8 +81,8 @@ h4 {
   transition: all 400ms ease-in-out;
 }
 .btn__heart--active {
-  background: -moz-linear-gradient(to bottom, #ff79da, #9356dc);
-  background: -webkit-linear-gradient(to bottom, #ff79da, #9356dc);
+  -moz-background: linear-gradient(to bottom, #ff79da, #9356dc);
+  -webkit-background: linear-gradient(to bottom, #ff79da, #9356dc);
   background: linear-gradient(to bottom, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -460,7 +460,6 @@ nav {
   }
   100% {
     opacity: 1;
-    transform: translateY(1);
   }
 }
 .menu__step .meal:hover .meal__price--check {
