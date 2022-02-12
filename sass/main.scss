@@ -5,7 +5,6 @@
 // UTILS
 
 @import "utils/_variable.scss";
-
 @import "utils/_mixins.scss";
 
 // LAYOUTS
@@ -14,3 +13,7 @@
 @import "layouts/_footer";
 @import "layouts/pages/_home";
 @import "layouts/pages/_restaurant";
+
+// MEDIA QUERIS
+
+@import "layouts/_media";

@@ -78,9 +78,11 @@
 @mixin transition($duration: $medium) {
   transition: all $duration ease-in-out;
 }
+
 @mixin animation--slide {
   margin-right: 0;
 }
+
 @mixin animation--check {
   transform: rotate(360deg);
   @include transition($duration: $medium);
@@ -133,6 +135,7 @@
     }
   }
 }
+
 @mixin animation--slide__menu {
   transform-origin: 50% 100%;
   animation: menu 1.2s ease-in-out;
@@ -142,14 +145,12 @@
       opacity: 0;
       transform: scaleY(0);
     }
-    60% {
+    50% {
       transform: scaleY(1.1);
-    }
-    75% {
-      transform: translateY(1);
     }
     100% {
       opacity: 1;
+      transform: translateY(1);
     }
   }
 }

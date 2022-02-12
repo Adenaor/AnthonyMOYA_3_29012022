@@ -4,10 +4,6 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  h2 {
-    text-align: center;
-  }
 }
 
 .title {
@@ -23,6 +19,8 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 30px;
+  background-color: $bckgd__color--grey;
 }
 
 #locate {
@@ -59,7 +57,7 @@ nav {
 //  FONCTIONNEMENT
 
 #functioning {
-  margin: 10% 5%;
+  margin: 50px 5%;
 }
 .functioning {
   ul {
@@ -91,7 +89,7 @@ nav {
     align-items: center;
     width: 100%;
     min-width: 250px;
-    max-width: 320px;
+    max-width: 420px;
     padding: 7px;
     @include shadow;
     border-radius: 15px;
@@ -116,24 +114,16 @@ nav {
 #restaurant {
   padding: 10% 5%;
   background-color: #f2f2f2;
-  flex-basis: 100%;
   h2 {
     margin: 20px 0;
   }
 }
 
 .restaurant {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-basis: 100%;
-  gap: 25px;
   &__bloc {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-basis: 100%;
     gap: 25px;
   }
@@ -160,6 +150,7 @@ nav {
     }
   }
 }
+
 .card1 {
   background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
@@ -172,6 +163,7 @@ nav {
 .card4 {
   background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
+
 .card1,
 .card2,
 .card3,
@@ -182,6 +174,7 @@ nav {
   height: 500px;
   border-radius: 25px 25px 0 0;
 }
+
 .card__description {
   display: flex;
   flex-direction: row;
