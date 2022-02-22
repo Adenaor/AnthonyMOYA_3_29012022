@@ -463,8 +463,8 @@ nav {
     opacity: 1;
   }
 }
-.menu__step .meal:hover .meal__price--check {
-  margin-right: 0;
+.menu__step .meal:hover .meal__price {
+  transform: translateX(0px);
 }
 .menu__step .meal:hover i {
   transform: rotate(360deg);
@@ -494,6 +494,9 @@ nav {
 }
 .menu__step .meal__price {
   display: flex;
+  position: relative;
+  transform: translateX(70px);
+  transition: all 400ms ease-in-out;
 }
 .menu__step .meal__price span {
   display: flex;
@@ -505,10 +508,8 @@ nav {
 .menu__step .meal__price--check {
   display: flex;
   width: 70px;
-  margin-right: -70px;
   border-radius: 0 15px 15px 0;
   background-color: #99e2d0;
-  transition: all 400ms ease-in-out;
 }
 .menu__step .meal__price--check i {
   margin: auto;
