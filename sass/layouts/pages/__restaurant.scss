@@ -68,7 +68,7 @@
       overflow: hidden;
       animation-fill-mode: both;
 
-      &:hover .meal__price {
+      &:hover .meal__price--check {
         @include animation--slide;
       }
       &:hover i {
@@ -100,9 +100,6 @@
       }
       &__price {
         display: flex;
-        position: relative;
-        transform: translateX(70px);
-        @include transition($duration: $slow);
         span {
           display: flex;
           font-weight: bold;
@@ -113,8 +110,10 @@
         &--check {
           display: flex;
           width: 70px;
+          margin-right: -70px;
           border-radius: 0 15px 15px 0;
           background-color: $tertiary__color;
+          @include transition($duration: $slow);
           i {
             margin: auto;
             justify-content: center;

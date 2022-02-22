@@ -83,7 +83,7 @@
 }
 
 @mixin animation--slide {
-  transform: translateX(0px);
+  margin-right: 0;
 }
 
 @mixin animation--check {
