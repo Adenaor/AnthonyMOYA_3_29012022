@@ -67,7 +67,8 @@ h4 {
 }
 
 .meal,
-.btn__heart {
+.btn__heart,
+.btn__command {
   cursor: pointer;
 }
 
