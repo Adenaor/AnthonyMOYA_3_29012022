@@ -34,7 +34,6 @@
     lighten($primary__color, 10%) 0%,
     lighten($secondary__color, 5%) 100%
   );
-  opacity: 0.8;
 }
 
 @mixin btn {
@@ -83,7 +82,7 @@
 }
 
 @mixin animation--slide {
-  transform: translateX(0px);
+  margin-right: 0;
 }
 
 @mixin animation--check {
