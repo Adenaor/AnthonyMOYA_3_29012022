@@ -88,8 +88,8 @@ h4 {
   width: 100%;
   @include animation--loading;
   animation: loading 4s ease-out;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  animation-duration: $slowly;
+  animation-delay: $slowly;
   animation-fill-mode: both;
 
   @keyframes loading {

@@ -98,7 +98,7 @@
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: $primary__color;
-    animation: spin 1s linear infinite;
+    animation: spin $slowly linear infinite;
 
     &::after {
       content: "";
