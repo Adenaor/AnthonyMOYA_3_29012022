@@ -54,14 +54,19 @@ h4 {
 
 .btn__heart {
   position: relative;
+  right: 70px;
   font-size: 32px;
+  svg {
+    height: 35px;
+    width: 35px;
+  }
   &--inactive {
-    color: $font__color--dgrey;
+    fill: $font__color--dgrey;
     position: absolute;
     @include transition($duration: $slow);
   }
   &--active {
-    @include heart--color;
+    fill: url(#grad1);
     @include transition($duration: $slow);
     opacity: 0;
   }

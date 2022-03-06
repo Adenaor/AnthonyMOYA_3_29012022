@@ -10,24 +10,6 @@
 
 //
 
-@mixin heart--color {
-  -moz-background: linear-gradient(
-    to bottom,
-    $secondary__color,
-    $primary__color
-  );
-  -webkit-background: linear-gradient(
-    to bottom,
-    $secondary__color,
-    $primary__color
-  );
-  background: linear-gradient(to bottom, $secondary__color, $primary__color);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 @mixin btn__bckgrd--lighter {
   background: linear-gradient(
     360deg,

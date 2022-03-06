@@ -74,21 +74,20 @@ h4 {
 
 .btn__heart {
   position: relative;
+  right: 70px;
   font-size: 32px;
 }
+.btn__heart svg {
+  height: 35px;
+  width: 35px;
+}
 .btn__heart--inactive {
-  color: #6b6969;
+  fill: #6b6969;
   position: absolute;
   transition: all 400ms ease-in-out;
 }
 .btn__heart--active {
-  -moz-background: linear-gradient(to bottom, #ff79da, #9356dc);
-  -webkit-background: linear-gradient(to bottom, #ff79da, #9356dc);
-  background: linear-gradient(to bottom, #ff79da, #9356dc);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  fill: url(#grad1);
   transition: all 400ms ease-in-out;
   opacity: 0;
 }
